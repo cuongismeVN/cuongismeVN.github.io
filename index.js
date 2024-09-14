@@ -8,9 +8,9 @@
 
 const songList = [
     { title: "Em Nào Có Tội", link: "https://thanhdieu.com/files/Em-N%C3%A0o-C%C3%B3-T%E1%BB%99i.mp3" },
-    { title: "Bạc Phận ( dách 5 triệu )", link: "" },
-    { title: "Nhạc Tết Ver 1", link: "" },
-    { title: "Future Remix", link: "" },
+    { title: "Bạc Phận ( dách 5 triệu )", link: "https://cuongismevn.github.io/music/bacphan.mp3" },
+    { title: "Nhạc Tết Ver 1", link: "https://cuongismevn.github.io/music/nhactet.mp3" },
+    { title: "Future Remix", link: "https://cuongismevn.github.io/music/future.mp3" },
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
