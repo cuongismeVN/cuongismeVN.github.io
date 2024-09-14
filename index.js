@@ -2,6 +2,50 @@
 // Up Link Nhạc - Đuôi Menu
 // Ước Bị Crack
 
+
+document.addEventListener('keydown', function(event) {
+    // Chặn F12
+    if (event.key === 'F12') {
+      event.preventDefault();
+      alert("F12 đã bị vô hiệu hóa.");
+    }
+    // Chặn Ctrl+Shift+I (Mở Developer Tools)
+    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+      event.preventDefault();
+      alert("Tổ hợp Ctrl+Shift+I đã bị vô hiệu hóa.");
+    }
+    // Chặn Ctrl+Shift+J (Console)
+    if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+      event.preventDefault();
+      alert("Tổ hợp Ctrl+Shift+J đã bị vô hiệu hóa.");
+    }
+    // Chặn Ctrl+U (Xem mã nguồn)
+    if (event.ctrlKey && event.key === 'U') {
+      event.preventDefault();
+      alert("Tổ hợp Ctrl+U đã bị vô hiệu hóa.");
+    }
+  });
+
+
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();  // Ngăn menu chuột phải
+    alert("Chuột phải đã bị vô hiệu hóa.");
+  });
+
+
+
+document.addEventListener("keydown", function (event) {
+    // Chặn Ctrl+Shift+I (Chrome, Firefox) và Ctrl+Shift+J
+    if ((event.ctrlKey && event.shiftKey && event.key === "I") ||
+        (event.ctrlKey && event.shiftKey && event.key === "J") ||
+        (event.ctrlKey && event.key === "U")) {  // Chặn Ctrl+U (Xem mã nguồn)
+      event.preventDefault();
+      alert("Tổ hợp phím đã bị vô hiệu hóa.");
+    }
+  });
+
+
+
 const songList = [
     { title: "Em Nào Có Tội", link: "https://thanhdieu.com/files/Em-N%C3%A0o-C%C3%B3-T%E1%BB%99i.mp3" },
     { title: "Nhạc Tết Chill", link: "https://github.com/cuongismeVN/music/blob/main/bacphan.mp3" },
