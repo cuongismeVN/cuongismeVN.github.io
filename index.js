@@ -7,6 +7,12 @@
 
 
 const songList = [
+    { title: "Nhạc Nóng Lạnh ", link: "https://cuongismevn.github.io/music/nhacsex.mp3" },
+    { title: "Hành Lang Cũ", link: "https://cuongismevn.github.io/music/hanhlangcu.mp3" },
+    { title: "Nhạc Tết Ver 2", link: "https://cuongismevn.github.io/music/nhactet2.mp3" },
+    { title: "Sơn Tùng ", link: "https://cuongismevn.github.io/music/sontungchill.mp3" },
+    { title: "Nhạc Đi Tắm", link: "https://cuongismevn.github.io/music/nhacditam.mp3" },
+    { title: "Nhạc Cách Mạng", link: "https://cuongismevn.github.io/music/nhaccachmang.mp3" },
     { title: "Em Nào Có Tội", link: "https://thanhdieu.com/files/Em-N%C3%A0o-C%C3%B3-T%E1%BB%99i.mp3" },
     { title: "Bạc Phận ( dách 5 triệu )", link: "https://cuongismevn.github.io/music/bacphan.mp3" },
     { title: "Nhạc Tết Ver 1", link: "https://cuongismevn.github.io/music/nhactet.mp3" },
