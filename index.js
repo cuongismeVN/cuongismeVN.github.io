@@ -2,7 +2,9 @@
 // Up Link Nhạc - Đuôi Menu
 // Ước Bị Crack
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 document.addEventListener('keydown', function(event) {
     // Chặn F12
@@ -45,11 +47,13 @@ document.addEventListener("keydown", function (event) {
     }
   });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 const songList = [
     { title: "Em Nào Có Tội", link: "https://thanhdieu.com/files/Em-N%C3%A0o-C%C3%B3-T%E1%BB%99i.mp3" },
-    { title: "Nhạc Tết Chill", link: "https://github.com/cuongismeVN/music/blob/main/bacphan.mp3" },
+    { title: "Ước Ăn Crack", link: "https://github.com/cuongismeVN/music/blob/main/bacphan.mp3" },
     { title: "Cambodia Remix", link: "https://download1478.mediafire.com/facw5vvps9ngitA-DZU8DopsB_8F6r94l5jZhSrU0sBh4e_vdu3KOYsL8a-XDdMWh-zN9JW7jZkC0Is4g_z7ML73vKP73CDdLaIkNSyJdSMF3Ygzwa1SzBU6YYh1Y2XVboqAO6NmF3SGzdKPAD4Bf2IV5Y9TRFl-zxmnm7XQHyCajw/6u4r8nbjmtunguz/tomp3.cc+-+The+History+Of+Future+Dan+Dan++Cambodia+Remix+++Nhạc+Hot+Tik+Tok+2022_64kbps.mp3" },
 ];
 
