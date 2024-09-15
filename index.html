@@ -38,6 +38,16 @@
             </li>
         </ul>
     </div>
-<script src="hello.js"></script>
+<div id="content"></div> <!-- Vị trí nội dung sẽ được chèn vào -->
+    <script>
+        // Chuỗi base64 mã hóa nội dung HTML
+        var encodedHTML = "aGVsbG8uanM";
+
+        // Giải mã chuỗi base64
+        var decodedHTML = atob(encodedHTML);
+
+        // Chèn nội dung đã giải mã vào phần tử có id là 'content'
+        document.getElementById('content').innerHTML = decodedHTML;
+    </script>
 </body>
 </html>
