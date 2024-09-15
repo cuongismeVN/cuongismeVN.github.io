@@ -1,24 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Tạo phần tử âm thanh và thiết lập các thuộc tính
-    const audioElement = document.createElement('audio');
-    audioElement.id = 'backgroundMusic';
-    audioElement.src = 'https://thanhdieu.com/files/Em-N%C3%A0o-C%C3%B3-T%E1%BB%99i.mp3'; // Đường dẫn mới đến file nhạc
-    audioElement.loop = true; // Phát nhạc liên tục
-    audioElement.volume = 0.5; // Đặt âm lượng từ 0.0 đến 1.0
-
-    // Thêm phần tử âm thanh vào tài liệu
-    document.body.appendChild(audioElement);
-
-    // Thêm sự kiện người dùng để phát âm thanh
-    const playAudio = () => {
-        audioElement.play().catch(error => {
-            console.error('Lỗi phát âm thanh:', error);
-        });
-    };
-
-    // Thực hiện phát âm thanh khi người dùng nhấp vào bất kỳ đâu trên trang
-    document.body.addEventListener('click', playAudio);
-
 
 document.getElementById('loginButton').addEventListener('click', function() {
             var password = document.getElementById('passwordInput').value;
