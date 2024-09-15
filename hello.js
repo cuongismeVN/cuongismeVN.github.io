@@ -1,49 +1,47 @@
+ // JavaScript của bạn bắt đầu từ đây
+ document.addEventListener('DOMContentLoaded', function() {
+    const loginButton = document.getElementById('loginButton');
+    const contactButton = document.getElementById('contactButton');
+    const cheatMenu = document.getElementById('cheatMenu');
+    const subMenu = document.getElementById('subMenu');
+    const toggleSubMenuButton = document.getElementById('toggleSubMenu');
+    const profileButton = document.getElementById('updateProfileButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const songSelect = document.getElementById('songSelect');
 
-// Đảm bảo rằng các phần tử tồn tại trước khi thêm sự kiện
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleMenuButton = document.getElementById('toggleMenuButton');
-    if (toggleMenuButton) {
-        toggleMenuButton.addEventListener('click', function() {
-            const menuContent = document.getElementById('cheatMenu');
-            if (menuContent) {
-                menuContent.classList.toggle('hidden');
-            }
-        });
-    }
+    document.getElementById('loginButton').addEventListener('click', function() {
+    var password = document.getElementById('passwordInput').value;
+    var cheatMenu = document.getElementById('cheatMenu');
+    var correctPassword = '1'; // Thay đổi thành mật khẩu của bạn
 
-    const toggleSubMenu = document.getElementById('toggleSubMenu');
-    if (toggleSubMenu) {
-        toggleSubMenu.addEventListener('click', function() {
-            const subMenu = document.getElementById('subMenu');
-            if (subMenu) {
-                subMenu.style.display = subMenu.style.display === 'none' ? 'block' : 'none';
-            }
-        });
-    }
-
-    const closeSubMenu = document.getElementById('closeSubMenu');
-    if (closeSubMenu) {
-        closeSubMenu.addEventListener('click', function() {
-            document.getElementById('subMenu').style.display = 'none';
-        });
-    }
-
-    const openSubSubMenu = document.getElementById('openSubSubMenu');
-    if (openSubSubMenu) {
-        openSubSubMenu.addEventListener('click', function() {
-            document.getElementById('subSubMenu').style.display = 'block';
-        });
-    }
-
-    const closeSubSubMenu = document.getElementById('closeSubSubMenu');
-    if (closeSubSubMenu) {
-        closeSubSubMenu.addEventListener('click', function() {
-            document.getElementById('subSubMenu').style.display = 'none';
-        });
+    if (password === correctPassword) {
+        cheatMenu.style.display = 'block';
+        document.getElementById('login').style.display = 'none';
+    } else {
+        alert('Key Sai, Nhấn Get Key Để Lấy Key Mới Nhất.');
     }
 });
+    contactButton.addEventListener('click', function() {
+        // Add your logic to get the key here
+        alert('Get Key button clicked');
+    });
 
+    toggleSubMenuButton.addEventListener('click', function() {
+        if (subMenu.style.display === 'block') {
+            subMenu.style.display = 'none';
+        } else {
+            subMenu.style.display = 'block';
+        }
+    });
 
+    profileButton.addEventListener('click', function() {
+        subMenu.style.display = 'none';
+    });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    songSelect.addEventListener('change', function() {
+        const selectedSong = songSelect.value;
         const songs = [
     'https://cuongismevn.github.io/music/always.mp3',
     'https://cuongismevn.github.io/music/doilong.mp3',
@@ -60,8 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
     'https://cuongismevn.github.io/music/bacphat.mp3',
     'https://cuongismevn.github.io/music/nhactet.mp3',
     'https://cuongismevn.github.io/music/future.mp3'
-];
-
+    ];
+        if (selectedSong) {
+            backgroundMusic.src = songs[selectedSong];
+            backgroundMusic.play();
+        }
+    });
+});
 const audio = document.getElementById('backgroundMusic');
 const songSelect = document.getElementById('songSelect');
 const playMusicButton = document.getElementById('playMusicButton');
@@ -94,30 +97,26 @@ playMusicButton.addEventListener('change', function() {
 
 // Phát tiếp bài khác sau khi kết thúc
 audio.addEventListener('ended', function() {
-    if (songSelect.value) {
-        let nextSongIndex = (parseInt(songSelect.value) + 1) % songs.length;
-        songSelect.value = nextSongIndex;
-        audio.src = songs[nextSongIndex];
-        audio.play();
+    let currentSongIndex = parseInt(songSelect.value);
+    if (isNaN(currentSongIndex) || currentSongIndex < 0 || currentSongIndex >= songs.length) {
+        return; // Không có bài hát hợp lệ để phát
     }
+
+    let nextSongIndex = (currentSongIndex + 1) % songs.length;
+    songSelect.value = nextSongIndex; // Cập nhật giá trị chọn bài hát
+    audio.src = songs[nextSongIndex]; // Thay đổi nguồn phát
+    audio.play(); // Phát bài tiếp theo
 });
 
-document.getElementById('loginButton').addEventListener('click', function() {
-    var password = document.getElementById('passwordInput').value;
-    var cheatMenu = document.getElementById('cheatMenu');
-    var correctPassword = '1'; // Thay đổi thành mật khẩu của bạn
 
-    if (password === correctPassword) {
-        cheatMenu.style.display = 'block';
-        document.getElementById('login').style.display = 'none';
-    } else {
-        alert('Key Sai, Nhấn Get Key Để Lấy Key Mới Nhất.');
-    }
-});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.getElementById('contactButton').addEventListener('click', function() {
     window.location.href = 'https://t.me/cheatioscrack'; // Thay đổi địa chỉ email nếu cần
 });
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.getElementById('searchSpeedButton').addEventListener('change', function() {
     if (this.checked) {
@@ -160,6 +159,7 @@ document.getElementById('deactivateSpeedButton').addEventListener('click', funct
     alert('Đã Xóa Speed');
 });
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Hiệu ứng particles.js
 particlesJS('particles-js', {
@@ -242,6 +242,8 @@ particlesJS('particles-js', {
     },
     "retina_detect": true
 });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.addEventListener('keydown', function(event) {
     // Chặn F12
