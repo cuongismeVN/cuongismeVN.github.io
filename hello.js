@@ -53,6 +53,23 @@
             }
         });
 
+  // Gán chức năng vào các nút
+         document.getElementById('searchSpeedButton').addEventListener('click', function() {
+            h5gg.clearResults();
+            h5gg.searchNumber('4397530849764387586', 'I64', '0x100000000', '0x200000000');
+            alert('Đã Tìm Speed_(' + h5gg.getResultsCount() + '/1)');
+        });
+
+        document.getElementById('activateSpeedButton').addEventListener('click', function() {
+            h5gg.editAll('4366458311853786803', 'I64');
+            alert('Speed Run');
+        });
+
+        document.getElementById('deactivateSpeedButton').addEventListener('click', function() {
+            h5gg.editAll('4397530849764387586', 'I64');
+            alert('Đã Xóa Speed');
+        });
+
         // Phát nhạc ngẫu nhiên
         let isPlaying = false;
         let currentSongIndex = -1;
