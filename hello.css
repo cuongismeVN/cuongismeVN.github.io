@@ -1,5 +1,4 @@
-        /* Các style đã có sẵn ở đây */
-        body {
+  body {
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
             line-height: 1.6;
@@ -11,6 +10,7 @@
             word-spacing: 1px;
             background-color: #f8f8f8;
             padding: 20px;
+            margin: 0;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -32,7 +32,7 @@
             border: 1px solid #444;
             color: white;
             border-radius: 10px;
-            width: 250px; /* Tăng độ rộng để phù hợp với menu mới */
+            width: 250px;
         }
 
         #cheatMenu ul {
@@ -42,19 +42,17 @@
 
         #cheatMenu ul li {
             margin: 10px 0;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .function-name {
-            display: block;
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 8px;
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
+            flex: 1; /* Làm cho tên chức năng chiếm hết không gian còn lại */
         }
 
         .switch {
@@ -163,11 +161,11 @@
         }
 
         #contactButton:hover {
-            background-color: #99b6dd;
+            background-color: #007bff;
         }
 
         #contactButton:active {
-            background-color: #c24141;
+            background-color: #0056b3;
         }
 
         #particles-js {
@@ -177,4 +175,22 @@
             width: 100%;
             height: 100%;
             z-index: -1;
+        }
+
+        /* Custom styling cho <select> */
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        select:focus {
+            border-color: #007bff;
+            outline: none;
         }
