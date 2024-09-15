@@ -22,6 +22,7 @@
         <button id="loginButton">Đăng nhập</button>
         <button id="contactButton">Get Key</button>
     </div>
+    
     <div id="cheatMenu" class="hidden">
         <h3>Cheat Menu</h3>
         <ul>
@@ -42,7 +43,7 @@
                 <label class="switch"><input type="checkbox" id="playMusicButton"><span class="slider"></span></label>
             </li>
             <li>
-                <button id="toggleSubMenu" class="subMenuButton">Mở Profile</button>
+                <button id="toggleSubMenu" class="subMenuButton">Mở Sub Menu</button>
             </li>
         </ul>
         <span class="function-name">Chọn Nhạc</span>
@@ -65,21 +66,30 @@
             <option value="14">Future</option>
         </select>
     </div>
-    <!-- Menu Phụ -->
-    <div id="subMenu">
-        <div id="profile">
-            <img src="https://i.imgur.com/OC8ot3X.png" alt="Profile Picture">
-            <div>
-                <h4>Cuong Is Me</h4>
-                <h5>Ngày sinh: 22/04/200x</h5>
-                <h5>Địa chỉ: TP.xxx</h5>
-            </div>
-        </div>
-        <button id="updateProfileButton">Tắt Profile</button>
-    </div>
+<!-- Menu Phụ -->
+<div id="subMenu" style="display: none;">
+    <h3>Sub Menu</h3>
+    <ul>
+        <li><button id="openSubSubMenu">Mở Sub Sub Menu</button></li>
+        <li><button id="closeSubMenu">Đóng Sub Menu</button></li>
+    </ul>
+</div>
+
+<!-- Menu Con -->
+<div id="subSubMenu" style="display: none;">
+    <h3>Sub Sub Menu</h3>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="closeSubSubMenu">Đóng Sub Sub Menu</button>
+</div>
+
+
 <audio id="backgroundMusic" loop></audio>
 <div id="particles-js"></div>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="hello.js"></script>
 </body>
 </html>
