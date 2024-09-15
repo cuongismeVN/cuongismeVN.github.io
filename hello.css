@@ -1,0 +1,177 @@
+   /* Các style đã có sẵn ở đây */
+        body {
+            font-family: 'Poppins', sans-serif; /* Sử dụng một font đẹp và hiện đại từ Google Fonts */
+            font-size: 18px; /* Kích thước chữ lớn hơn một chút để dễ đọc */
+            line-height: 1.6; /* Tăng khoảng cách giữa các dòng để chữ trông thoáng hơn */
+            color: #222; /* Màu chữ tối hơn cho độ tương phản tốt */
+            -webkit-font-smoothing: antialiased; /* Làm mịn font chữ */
+            -moz-osx-font-smoothing: grayscale; /* Làm mịn font trên macOS */
+            text-rendering: optimizeLegibility; /* Tối ưu hóa hiển thị chữ */
+            letter-spacing: 0.5px; /* Giãn khoảng cách giữa các ký tự nhẹ nhàng */
+            word-spacing: 1px; /* Giãn khoảng cách giữa các từ */
+            background-color: #f8f8f8; /* Nền nhạt để tạo độ tương phản tốt */
+            padding: 20px; /* Tạo không gian thoáng cho phần nội dung */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif; /* Font đậm hơn cho tiêu đề */
+            color: #ffffff;
+            letter-spacing: 1px; /* Giãn rộng các chữ trong tiêu đề */
+            text-transform: uppercase; /* Viết hoa tiêu đề */
+            margin-bottom: 15px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #cheatMenu {
+            margin-top: 20px;
+            background-color: #222;
+            padding: 15px;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        #cheatMenu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cheatMenu ul li {
+            margin: 10px 0;
+        }
+
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Đặt tên chức năng ở trên nút */
+        .function-name {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px; /* Khoảng cách giữa tên và nút */
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Thiết lập switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #28a745;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider:before {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Thiết lập container đăng nhập */
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Thiết lập trường mật khẩu và nút */
+        .password-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .password-input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        #loginButton, #contactButton {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px; /* Khoảng cách giữa các nút */
+        }
+
+        #loginButton:hover, #contactButton:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #loginButton:active, #contactButton:active {
+            transform: scale(0.95);
+        }
+
+        /* Style cho nút Contact */
+        #contactButton {
+            background-color: #0a9233; /* Màu xanh lá cho nút Contact */
+        }
+
+        #contactButton:hover {
+            background-color: #99b6dd; /* Màu xanh đậm hơn khi hover */
+        }
+
+        #contactButton:active {
+            background-color: #c24141; /* Màu xanh đậm hơn khi nhấn */
+        }
