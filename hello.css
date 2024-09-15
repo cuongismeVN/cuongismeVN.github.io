@@ -1,7 +1,5 @@
 
 
-
-
 /* Các style đã có sẵn ở đây */
         body {
             font-family: 'Poppins', sans-serif;
@@ -172,4 +170,14 @@
 
         #contactButton:active {
             background-color: #c24141;
+        }
+
+        /* Style cho hiệu ứng hoa đào */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Để hiệu ứng hoa đào nằm dưới nội dung khác */
         }
