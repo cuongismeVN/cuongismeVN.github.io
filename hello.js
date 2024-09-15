@@ -64,3 +64,63 @@
             h5gg.editAll('4397530849764387586', 'I64');
             alert('Đã Xóa Speed');
         });
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener('keydown', function(event) {
+    // Chặn F12
+    if (event.key === 'F12') {
+      event.preventDefault();
+      alert("F12 đã bị vô hiệu hóa.");
+    }
+    // Chặn Ctrl+Shift+I (Mở Developer Tools)
+    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+      event.preventDefault();
+      alert("Tổ hợp Ctrl+Shift+I đã bị vô hiệu hóa.");
+    }
+    // Chặn Ctrl+Shift+J (Console)
+    if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+      event.preventDefault();
+      alert("Tổ hợp Ctrl+Shift+J đã bị vô hiệu hóa.");
+    }
+    // Chặn Ctrl+U (Xem mã nguồn)
+    if (event.ctrlKey && event.key === 'U') {
+      event.preventDefault();
+      alert("Tổ hợp Ctrl+U đã bị vô hiệu hóa.");
+    }
+  });
+
+
+document.addEventListener("contextmenu", function (event) {
+     event.preventDefault();  // Ngăn menu chuột phải
+     alert("Chuột phải đã bị vô hiệu hóa.");
+   });
+
+
+
+document.addEventListener("keydown", function (event) {
+    // Chặn Ctrl+Shift+I (Chrome, Firefox) và Ctrl+Shift+J
+    if ((event.ctrlKey && event.shiftKey && event.key === "I") ||
+        (event.ctrlKey && event.shiftKey && event.key === "J") ||
+        (event.ctrlKey && event.key === "U")) {  // Chặn Ctrl+U (Xem mã nguồn)
+      event.preventDefault();
+      alert("Tổ hợp phím đã bị vô hiệu hóa.");
+    }
+  });
+
+  var _0x7eff = ["c", "C", "x", "u", "I", "preventDefault", "cái địt con mẹ màyyy", "contextmenu", "addEventListener", "keydown", "ctrlKey", "key", "includes", "F12"];
+  const disabledKeys = [_0x7eff[0], _0x7eff[1], _0x7eff[2], _0x7eff[3], _0x7eff[4]];
+  const showAlert = (_0xc0c8x3) => {
+    _0xc0c8x3[_0x7eff[5]]();
+    return alert(_0x7eff[6]);
+  };
+  document[_0x7eff[8]](_0x7eff[7], (_0xc0c8x3) => {
+    showAlert(_0xc0c8x3)
+  });
+  document[_0x7eff[8]](_0x7eff[9], (_0xc0c8x3) => {
+    if (_0xc0c8x3[_0x7eff[10]] && disabledKeys[_0x7eff[12]](_0xc0c8x3[_0x7eff[11]]) || _0xc0c8x3[_0x7eff[11]] === _0x7eff[13]) {
+      showAlert(_0xc0c8x3)
+    }
+  });
+
