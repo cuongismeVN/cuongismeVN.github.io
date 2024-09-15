@@ -1,23 +1,27 @@
-   /* Các style đã có sẵn ở đây */
+
+
+
+
+/* Các style đã có sẵn ở đây */
         body {
-            font-family: 'Poppins', sans-serif; /* Sử dụng một font đẹp và hiện đại từ Google Fonts */
-            font-size: 18px; /* Kích thước chữ lớn hơn một chút để dễ đọc */
-            line-height: 1.6; /* Tăng khoảng cách giữa các dòng để chữ trông thoáng hơn */
-            color: #222; /* Màu chữ tối hơn cho độ tương phản tốt */
-            -webkit-font-smoothing: antialiased; /* Làm mịn font chữ */
-            -moz-osx-font-smoothing: grayscale; /* Làm mịn font trên macOS */
-            text-rendering: optimizeLegibility; /* Tối ưu hóa hiển thị chữ */
-            letter-spacing: 0.5px; /* Giãn khoảng cách giữa các ký tự nhẹ nhàng */
-            word-spacing: 1px; /* Giãn khoảng cách giữa các từ */
-            background-color: #f8f8f8; /* Nền nhạt để tạo độ tương phản tốt */
-            padding: 20px; /* Tạo không gian thoáng cho phần nội dung */
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #222;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            letter-spacing: 0.5px;
+            word-spacing: 1px;
+            background-color: #f8f8f8;
+            padding: 20px;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Roboto', sans-serif; /* Font đậm hơn cho tiêu đề */
+            font-family: 'Roboto', sans-serif;
             color: #ffffff;
-            letter-spacing: 1px; /* Giãn rộng các chữ trong tiêu đề */
-            text-transform: uppercase; /* Viết hoa tiêu đề */
+            letter-spacing: 1px;
+            text-transform: uppercase;
             margin-bottom: 15px;
         }
 
@@ -32,7 +36,7 @@
             border: 1px solid #444;
             color: white;
             border-radius: 10px;
-            width: 200px;
+            width: 250px; /* Tăng độ rộng để phù hợp với menu mới */
         }
 
         #cheatMenu ul {
@@ -44,22 +48,19 @@
             margin: 10px 0;
         }
 
-
         input[type="checkbox"] {
             margin-right: 10px;
         }
 
-        /* Đặt tên chức năng ở trên nút */
         .function-name {
             display: block;
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 8px; /* Khoảng cách giữa tên và nút */
+            margin-bottom: 8px;
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Thiết lập switch */
         .switch {
             position: relative;
             display: inline-block;
@@ -109,7 +110,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* Thiết lập container đăng nhập */
         .container {
             width: 300px;
             margin: 100px auto;
@@ -127,7 +127,6 @@
             color: #333;
         }
 
-        /* Thiết lập trường mật khẩu và nút */
         .password-input {
             width: calc(100% - 20px);
             padding: 10px;
@@ -151,7 +150,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            margin: 0 5px; /* Khoảng cách giữa các nút */
+            margin: 0 5px;
         }
 
         #loginButton:hover, #contactButton:hover {
@@ -163,15 +162,14 @@
             transform: scale(0.95);
         }
 
-        /* Style cho nút Contact */
         #contactButton {
-            background-color: #0a9233; /* Màu xanh lá cho nút Contact */
+            background-color: #0a9233;
         }
 
         #contactButton:hover {
-            background-color: #99b6dd; /* Màu xanh đậm hơn khi hover */
+            background-color: #99b6dd;
         }
 
         #contactButton:active {
-            background-color: #c24141; /* Màu xanh đậm hơn khi nhấn */
+            background-color: #c24141;
         }
