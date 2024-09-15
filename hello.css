@@ -1,4 +1,4 @@
-/* Các style đã có sẵn ở đây */
+        /* Các style đã có sẵn ở đây */
         body {
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
@@ -168,4 +168,13 @@
 
         #contactButton:active {
             background-color: #c24141;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
