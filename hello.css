@@ -1,4 +1,4 @@
-body {
+        body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -178,7 +178,7 @@ input:checked + .slider:before {
 }
 
 /* Custom styling cho <select> */
-    select {
+select {
     width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ccc;
@@ -233,6 +233,7 @@ select:focus {
     cursor: pointer;
     font-size: 16px;
     margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #subMenu button:hover {
@@ -257,6 +258,7 @@ select:focus {
     top: 100px;
     left: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 #subSubMenu:hover {
@@ -282,6 +284,7 @@ select:focus {
     cursor: pointer;
     font-size: 16px;
     margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #subSubMenu button:hover {
@@ -293,3 +296,4 @@ select:focus {
     background-color: #bd2130;
     transform: scale(0.95);
 }
+
