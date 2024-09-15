@@ -6,49 +6,48 @@
 
 
 
-     <!DOCTYPE html>
-     <html lang="vi">
-     <head>
-         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>Cuong Is Me</title>
-         <link rel="stylesheet" href="hello.css">
-     </header>
-     </head>
-     <body>
-         <div id="login" class="container">
-             <h2>Đăng nhập</h2>
-             <input type="password" id="passwordInput" class="password-input" placeholder="Nhập key vào đây">
-             <button id="loginButton">Login</button>
-             <button id="contactButton">Get Key</button>
-         </div>
-         <div id="cheatMenu" class="hidden">
-             <h3>Cheat Menu</h3>
-             <ul>
-                 <li>
-                     <label class="function-name">Tìm Speed</label>
-                     <label class="switch"><input type="checkbox" id="searchSpeedButton"><span class="slider"></span></label>
-                 </li>
-                 <li>
-                     <label class="function-name">Speed Run</label>
-                     <label class="switch"><input type="checkbox" id="activateSpeedButton"><span class="slider"></span></label>
-                 </li>
-                 <li>
-                     <label class="function-name">Xóa Speed</label>
-                     <label class="switch"><input type="checkbox" id="deactivateSpeedButton"><span class="slider"></span></label>
-                 </li>
-                 <!-- Thêm phần âm thanh -->
-                 <li>
-                     <label class="function-name">Music Play</label>
-                     <label class="switch"><input type="checkbox" id="playMusicButton"><span class="slider"></span></label>
-                 </li>
-             </ul>
-         </div>
+ <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuong Is Me</title>
+    <link rel="stylesheet" href="hello.css">
+</head>
+<body>
+    <div id="login" class="container">
+        <h2>Đăng nhập</h2>
+        <input type="password" id="passwordInput" class="password-input" placeholder="Nhập key vào đây">
+        <button id="loginButton">Đăng nhập</button>
+        <button id="contactButton">Get Key</button>
+    </div>
+    <div id="cheatMenu" class="hidden">
+        <h3>Cheat Menu</h3>
+        <ul>
+            <li>
+                <label class="function-name">Tìm Speed</label>
+                <label class="switch"><input type="checkbox" id="searchSpeedButton"><span class="slider"></span></label>
+            </li>
+            <li>
+                <label class="function-name">Speed Run</label>
+                <label class="switch"><input type="checkbox" id="activateSpeedButton"><span class="slider"></span></label>
+            </li>
+            <li>
+                <label class="function-name">Xóa Speed</label>
+                <label class="switch"><input type="checkbox" id="deactivateSpeedButton"><span class="slider"></span></label>
+            </li>
+            <!-- Thêm phần âm thanh -->
+            <li>
+                <label class="function-name">Music Play</label>
+                <label class="switch"><input type="checkbox" id="playMusicButton"><span class="slider"></span></label>
+            </li>
+        </ul>
+    </div>
     <!-- Thêm phần tử âm thanh -->
     <audio id="backgroundMusic" loop></audio>
     <div id="particles-js"></div>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-         <script src="hello.js"></script>
-     </body>
-     </html>
+    <script src="hello.js"></script>
+</body>
+</html>
