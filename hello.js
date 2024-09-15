@@ -1,3 +1,85 @@
+ particlesJS('particles-js', {
+    "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#FF69B4" // Màu hồng đậm
+        },
+        "shape": {
+            "type": "circle", // Sử dụng hình tròn cho các hạt
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.9, // Tăng độ rõ
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 1,
+                "opacity_min": 0.2,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 4, // Tăng kích thước hạt
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 2,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": false
+        },
+        "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "bottom",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": false,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": false,
+                "mode": "push"
+            },
+            "resize": true
+        }
+    },
+    "retina_detect": true
+});
+
+
         // Danh sách các đường dẫn đến bài hát
         const songs = [
             'https://thanhdieu.com/files/Em-N%C3%A0o-C%C3%B3-T%E1%BB%99i.mp3',
@@ -53,8 +135,8 @@
             }
         });
 
-  // Gán chức năng vào các nút
-         document.getElementById('searchSpeedButton').addEventListener('click', function() {
+        // Gán chức năng vào các nút
+        document.getElementById('searchSpeedButton').addEventListener('click', function() {
             h5gg.clearResults();
             h5gg.searchNumber('4397530849764387586', 'I64', '0x100000000', '0x200000000');
             alert('Đã Tìm Speed_(' + h5gg.getResultsCount() + '/1)');
@@ -91,60 +173,55 @@
             playRandomSong();
         });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        document.addEventListener('keydown', function(event) {
+            // Chặn F12
+            if (event.key === 'F12') {
+                event.preventDefault();
+                alert("F12 đã bị vô hiệu hóa.");
+            }
+            // Chặn Ctrl+Shift+I (Mở Developer Tools)
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+                alert("Tổ hợp Ctrl+Shift+I đã bị vô hiệu hóa.");
+            }
+            // Chặn Ctrl+Shift+J (Console)
+            if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+                event.preventDefault();
+                alert("Tổ hợp Ctrl+Shift+J đã bị vô hiệu hóa.");
+            }
+            // Chặn Ctrl+U (Xem mã nguồn)
+            if (event.ctrlKey && event.key === 'U') {
+                event.preventDefault();
+                alert("Tổ hợp Ctrl+U đã bị vô hiệu hóa.");
+            }
+        });
 
-document.addEventListener('keydown', function(event) {
-    // Chặn F12
-    if (event.key === 'F12') {
-      event.preventDefault();
-      alert("F12 đã bị vô hiệu hóa.");
-    }
-    // Chặn Ctrl+Shift+I (Mở Developer Tools)
-    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-      event.preventDefault();
-      alert("Tổ hợp Ctrl+Shift+I đã bị vô hiệu hóa.");
-    }
-    // Chặn Ctrl+Shift+J (Console)
-    if (event.ctrlKey && event.shiftKey && event.key === 'J') {
-      event.preventDefault();
-      alert("Tổ hợp Ctrl+Shift+J đã bị vô hiệu hóa.");
-    }
-    // Chặn Ctrl+U (Xem mã nguồn)
-    if (event.ctrlKey && event.key === 'U') {
-      event.preventDefault();
-      alert("Tổ hợp Ctrl+U đã bị vô hiệu hóa.");
-    }
-  });
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();  // Ngăn menu chuột phải
+            alert("Chuột phải đã bị vô hiệu hóa.");
+        });
 
+        document.addEventListener("keydown", function (event) {
+            // Chặn Ctrl+Shift+I (Chrome, Firefox) và Ctrl+Shift+J
+            if ((event.ctrlKey && event.shiftKey && event.key === "I") ||
+                (event.ctrlKey && event.shiftKey && event.key === "J") ||
+                (event.ctrlKey && event.key === "U")) {  // Chặn Ctrl+U (Xem mã nguồn)
+                event.preventDefault();
+                alert("Tổ hợp phím đã bị vô hiệu hóa.");
+            }
+        });
 
-document.addEventListener("contextmenu", function (event) {
-     event.preventDefault();  // Ngăn menu chuột phải
-     alert("Chuột phải đã bị vô hiệu hóa.");
-   });
-
-
-
-document.addEventListener("keydown", function (event) {
-    // Chặn Ctrl+Shift+I (Chrome, Firefox) và Ctrl+Shift+J
-    if ((event.ctrlKey && event.shiftKey && event.key === "I") ||
-        (event.ctrlKey && event.shiftKey && event.key === "J") ||
-        (event.ctrlKey && event.key === "U")) {  // Chặn Ctrl+U (Xem mã nguồn)
-      event.preventDefault();
-      alert("Tổ hợp phím đã bị vô hiệu hóa.");
-    }
-  });
-
-  var _0x7eff = ["c", "C", "x", "u", "I", "preventDefault", "cái địt con mẹ màyyy", "contextmenu", "addEventListener", "keydown", "ctrlKey", "key", "includes", "F12"];
-  const disabledKeys = [_0x7eff[0], _0x7eff[1], _0x7eff[2], _0x7eff[3], _0x7eff[4]];
-  const showAlert = (_0xc0c8x3) => {
-    _0xc0c8x3[_0x7eff[5]]();
-    return alert(_0x7eff[6]);
-  };
-  document[_0x7eff[8]](_0x7eff[7], (_0xc0c8x3) => {
-    showAlert(_0xc0c8x3)
-  });
-  document[_0x7eff[8]](_0x7eff[9], (_0xc0c8x3) => {
-    if (_0xc0c8x3[_0x7eff[10]] && disabledKeys[_0x7eff[12]](_0xc0c8x3[_0x7eff[11]]) || _0xc0c8x3[_0x7eff[11]] === _0x7eff[13]) {
-      showAlert(_0xc0c8x3)
-    }
-  });
+        var _0x7eff = ["c", "C", "x", "u", "I", "preventDefault", "cái địt con mẹ màyyy", "contextmenu", "addEventListener", "keydown", "ctrlKey", "key", "includes", "F12"];
+        const disabledKeys = [_0x7eff[0], _0x7eff[1], _0x7eff[2], _0x7eff[3], _0x7eff[4]];
+        const showAlert = (_0xc0c8x3) => {
+            _0xc0c8x3[_0x7eff[5]]();
+            return alert(_0x7eff[6]);
+        };
+        document[_0x7eff[8]](_0x7eff[7], (_0xc0c8x3) => {
+            showAlert(_0xc0c8x3)
+        });
+        document[_0x7eff[8]](_0x7eff[9], (_0xc0c8x3) => {
+            if (_0xc0c8x3[_0x7eff[10]] && disabledKeys[_0x7eff[12]](_0xc0c8x3[_0x7eff[11]]) || _0xc0c8x3[_0x7eff[11]] === _0x7eff[13]) {
+                showAlert(_0xc0c8x3)
+            }
+        });
