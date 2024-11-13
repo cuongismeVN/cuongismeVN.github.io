@@ -1,0 +1,324 @@
+     /* Đặt kiểu cho body */
+     body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #222;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Đặt kiểu cho các tiêu đề */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Roboto', sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    /* Ẩn các phần tử với lớp .hidden */
+    .hidden {
+        display: none;
+    }
+
+    /* Đặt kiểu cho menu cheat */
+    #cheatMenu {
+        background-color: #222;
+        padding: 15px;
+        border: 1px solid #444;
+        color: white;
+        border-radius: 10px;
+        width: 250px;
+        position: relative;
+    }
+
+    /* Đặt kiểu cho danh sách trong menu cheat */
+    #cheatMenu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Đặt kiểu cho các mục trong danh sách menu cheat */
+    #cheatMenu ul li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    /* Đặt kiểu cho tên chức năng trong menu cheat */
+    .function-name {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    /* Đặt kiểu cho công tắc bật/tắt */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 34px;
+        transition: .4s;
+    }
+
+    .slider:before {
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: white;
+        transition: .4s;
+        left: 2px;
+        bottom: 2px;
+    }
+
+    input:checked + .slider {
+        background-color: #28a745;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(20px);
+    }
+
+    .slider:before {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Đặt kiểu cho phần tử chứa nội dung chính */
+    .container {
+        width: 300px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Đặt kiểu cho tiêu đề trong phần tử chứa */
+    .container h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    /* Đặt kiểu cho nút đăng nhập và liên hệ */
+    #loginButton, #contactButton {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    #loginButton:hover, #contactButton:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    #loginButton:active, #contactButton:active {
+        transform: scale(0.95);
+    }
+
+    #contactButton {
+        background-color: #0a9233;
+    }
+
+    #contactButton:hover {
+        background-color: #007bff;
+    }
+
+    #contactButton:active {
+        background-color: #0056b3;
+    }
+
+    /* Đặt kiểu cho phần tử particles.js */
+    #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    /* Đặt kiểu cho ô nhập mật khẩu */
+    .password-input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .password-input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    /* Đặt kiểu cho nút bật/tắt trong menu phụ */
+    #toggleSubMenu {
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    #toggleSubMenu:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    #toggleSubMenu:active {
+        background-color: #004494;
+        transform: scale(0.95);
+    }
+
+    /* Đặt kiểu cho ô chọn */
+    select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #fff;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
+
+    select:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    /* Đặt kiểu cho menu phụ */
+    #subMenu, #subSubMenu {
+        background-color: #222;
+        color: white;
+        padding: 10px;
+        border: 1px solid #555;
+        border-radius: 10px;
+        position: absolute;
+        width: 260px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+
+    /* Đặt kiểu cho menu phụ con */
+    #subSubMenu {
+        background-color: #444;
+        border: 1px solid #666;
+        width: 180px;
+    }
+
+    /* Đặt kiểu cho danh sách trong menu phụ */
+    #subMenu ul, #subSubMenu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Đặt kiểu cho các nút trong menu phụ */
+    #subMenu button, #subSubMenu button {
+        padding: 8px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    #subMenu button:hover, #subSubMenu button:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+    #subMenu button:active, #subSubMenu button:active {
+        background-color: #1e7e34;
+        transform: scale(0.95);
+    }
+
+   /* Đặt kiểu cho phần tử profile */
+   #profile {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+  }
+
+  /* Đặt kiểu cho ảnh profile */
+  #profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+ } 
+
+ /* Đặt kiểu cho thông tin profile */
+ #profile div {
+ text-align: left;
+ }  
+
+/* Đặt kiểu cho tên trong profile */
+#profile h4 {
+font-size: 16px; /* Thay đổi kích thước chữ cho tên */
+margin: 0; /* Xóa margin */
+}
+
+/* Đặt kiểu cho ngày sinh và địa chỉ trong profile */
+#profile h5 {
+font-size: 13px; /* Thay đổi kích thước chữ cho ngày sinh và địa chỉ */
+   margin: 5px 0; /* Thay đổi margin */
+    }
+
+    /* Đặt kiểu cho nút cập nhật profile */
+    #updateProfile {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    #updateProfile:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    #updateProfile:active {
+        background-color: #004494;
+        transform: scale(0.95);
+    }
