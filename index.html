@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xúc Sắc Chẵn Lẻ</title>
+    <link rel="stylesheet" href="hello.css">
+    </style>
+</head>
+<body>
+    <h1>Sunwin Github</h1>
+    <p>Hôm Nay 1 Tỷ Nhưng Ngày Mai 100 Tỷ</p>
+    
+    <!-- Hiển thị số dư xu -->
+    <div class="balance" id="balance">Số dư hiện tại: 0</div>
+    
+    <!-- Nạp xu -->
+    <button onclick="deposit()">Nạp xu</button>
+
+    <!-- Nhập mã code để mở rộng số lần nạp -->
+    <div class="input-code">
+        <input type="text" id="promoCode" placeholder="Nhập mã code để mở thêm nạp xu" />
+        <button onclick="usePromoCode()">Sử dụng mã code</button>
+    </div>
+    
+    <!-- Chọn Chẵn/Lẻ -->
+    <button onclick="selectChoice('even')">Cược chẵn</button>
+    <button onclick="selectChoice('odd')">Cược lẻ</button>
+    <br>
+    
+    <!-- Nút Reset -->
+    <button onclick="resetGame()">Chơi tiếp</button>
+    
+    <div class="dice" id="dice">🎲</div>
+    <div class="result" id="result"></div>
+    <div class="warning" id="warning"></div>
+
+    <!-- Thêm thẻ audio để phát nhạc tự động khi nạp xu -->
+   <audio id="background-music" loop>
+    <source src="music/nhac.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+   </audio>
+
+    <!-- Nút riêng biệt để phát nhạc -->
+    <button id="musicButton" onclick="playMusic()">Phát nhạc</button>
+
+    <script src="hello.js"></script>
+</body>
+</html>
