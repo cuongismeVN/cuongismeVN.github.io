@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+  background-color: #121212;
+  color: #ffcc00;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+h1, h3 {
+  font-weight: 600;
+}
+input, button {
+  padding: 12px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input {
+  background: #1e1e1e;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  width: 80%;
+}
+input:focus {
+  border-color: #ffaa00;
+  box-shadow: 0 0 8px #ffaa00;
+}
+button {
+  background: linear-gradient(45deg, #ff4d00, #ffcc00);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.5);
+}
+.result, .history {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.controls {
+  margin-top: 20px;
+}
+.history-box {
+  border: 1px solid #ffcc00;
+  padding: 12px;
+  margin-top: 10px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  word-break: break-all;
+}
+a button {
+  width: 200px;
+}
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.overlay input {
+  width: 250px;
+  text-align: center;
+  margin-top: 20px;
+}
+.overlay button {
+  margin-top: 10px;
+  width: 150px;
+}
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  display: none;
+}
+
+.notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(45deg, #ff4d00, #ffcc00);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.5);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  font-size: 16px;
+  pointer-events: none;
+}
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

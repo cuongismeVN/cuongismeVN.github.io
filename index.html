@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tool Giải MD5</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="notification" class="notification"></div>
+
+  <div class="overlay" id="overlay">
+    <h2>🔒 Nhập Key Để Đăng Nhập</h2>
+    <input type="password" id="keyInput" placeholder="Nhập KEY"/>
+    <button onclick="checkKey()">Đăng Nhập</button>
+    <div class="error-msg" id="errorMsg">❌ Key không hợp lệ!</div>
+  </div>
+
+  <h1>🎲Tool Dự Đoán Chuỗi MD5🎲</h1>
+  <p>📌Tool Chỉ Mang Tính Chất Tham Khảo. Kết Quả Dự Đoán Không Đảm Bảo Độ Chính Xác Và Không Phải Lời Khuyên Tài Chính.📌</p>
+  <p>✅Độ Tin Cậy Hiện Thị Chỉ Là 1 Ước Tính. Cờ Bạc Online Có Rủi Ro, Quản Lý Vốn Cẩn Thận.✅</p>
+  <p>💎Chơi Có Trách Nhiệm & Biết Dừng Đứng Lúc!💎</p>
+
+  <a href="https://t.me/ongtrum_net"><button>ADMIN</button></a>
+  <p></p>
+
+  <input type="text" id="md5Input" placeholder="Nhập mã MD5 32 ký tự"/>
+  <br/>
+  <input type="text" id="historyInput" placeholder="Nhập lịch sử 15 phiên gần nhất (VD: TXTXXTX...)"/>
+  <br/>
+  <button onclick="predict()">Dự Đoán</button>
+  <button onclick="resetMd5()">Reset MD5</button>
+
+  <div class="result" id="result">KẾT QUẢ: --</div>
+  <div class="controls" id="confirmBtns" style="display: none;">
+    <button onclick="confirmResult(true)">ĐÚNG</button>
+    <button onclick="confirmResult(false)">SAI</button>
+  </div>
+
+  <div class="history">
+    <h3>Lịch Sử Cầu:</h3>
+    <div class="history-box" id="historyBox">--</div>
+  </div>
+  <div class="footer">
+    <p>© 2025 MrCios | Sử Dụng Thuật Toán AI Và Phân Tích Cầu Nâng Cao</p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
