@@ -1,8 +1,8 @@
- // === KHỞI TẠO keys + deviceId ===
- let keys = JSON.parse(localStorage.getItem("keys")) || {
-    "ongtrum123": device123,
-    "ongtrum456": null,
-    "ongtrum789": null
+   // === KHỞI TẠO keys + deviceId ===
+   let keys = JSON.parse(localStorage.getItem("keys")) || {
+    "123": null,
+    "345": null,
+    "789": null
   };
 
   let deviceId = localStorage.getItem("deviceId");
